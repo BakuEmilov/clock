@@ -98,4 +98,44 @@ body {
 .inner-clock-face::before{
   content: '';
   position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 18px;
+  margin-left: -9px;
+  margin-top: -6px;
+  background: #4d4b63;
+  z-index: 11;
 }
+
+.hand{
+  width: 50%;
+  right: 50%;
+  height: 6px;
+  background: #61afff;
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  transform-origin: 100%;
+  transition: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand.hour-hand{
+  width: 30%;
+  z-index: 3;
+}
+
+.hand.min-hand{
+  width: 3px;
+  z-index: 10;
+  width: 40%;
+}
+
+.hand.second-hand{
+  background: #ee791a;
+  width: 45%;
+  height: 2px;
+}
+
